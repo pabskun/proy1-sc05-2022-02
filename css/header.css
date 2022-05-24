@@ -1,0 +1,11 @@
+.header-principal {
+    background-color: #1d1c21;
+}
+
+.header-principal a {
+    color: #e4ffff;
+}
+
+.header-principal a:hover {
+    color: #3abab4;
+}
