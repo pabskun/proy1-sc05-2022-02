@@ -1,11 +1,56 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
 .header-principal {
+    align-items: center;
     background-color: #1d1c21;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
+    height: 80px;
+}
+
+.header-principal nav {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
 }
 
 .header-principal a {
     color: #e4ffff;
+    text-decoration: none;
 }
 
 .header-principal a:hover {
     color: #3abab4;
+}
+
+.header-principal .logo {
+    width: 125px;
+    /* Comentario */
+}
+
+.header-principal .logo img {
+    width: 100%;
+}
+
+.btn-celeste {
+    background-color: #3abab4;
+    border-radius: 5px;
+    height: 40px;
+    width: 140px;
+    display: flex;
+    /* Propiedades del flex (solo sirven si el display es flex): */
+    justify-content: center;
+    align-items: center;
+}
+
+a.btn-celeste {
+    color: #1d1c21;
+}
+
+.header-principal .btn-celeste:hover {
+    color: #fff;
 }
