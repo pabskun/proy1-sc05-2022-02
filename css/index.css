@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #sct-banner {
     background-image: url('../imgs/banner-principal.jpg');
     background-size: cover;
@@ -6,14 +10,35 @@
     flex-direction: column;
     height: 400px;
     justify-content: center;
+    padding-left: 3%;
 }
 
 #sct-banner .info-banner {
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
+    font-family: 'Kdam Thmor Pro', sans-serif;
     font-size: 60px;
+    margin-bottom: 20px;
+    padding: 20px 2%;
+    width: 52%;
 }
 
 #sct-banner .info-banner p:nth-child(2) {
-    font-size: 90px;
+    font-size: 95px;
     font-weight: bold;
+}
+
+#sct-banner #txt-correo {
+    height: 40px;
+    width: 250px;
+}
+
+#sct-banner .btn-celeste {
+    border: 0;
+    display: inline-block;
+    height: 40px;
+}
+
+#sct-banner .btn-celeste:hover {
+    color: #fff;
 }
