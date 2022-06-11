@@ -4,7 +4,8 @@ body {
 
 .header-principal {
     align-items: center;
-    background-color: #1d1c21;
+    /* background-color: #1d1c21; */
+    background-color: #000;
     display: flex;
     justify-content: space-between;
     padding-left: 3%;
@@ -47,7 +48,7 @@ body {
     align-items: center;
 }
 
-a.btn-celeste {
+.header-principal .btn-celeste {
     color: #1d1c21;
 }
 
