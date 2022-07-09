@@ -5,28 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/usuario-registro.css">
     <title>Registro de usuarios</title>
 </head>
 
 <body>
     <form>
         <div>
-            <label for="txt-nombre">Nombre</label>
+            <label for="txt-correo">Correo electrónico:</label>
+            <input type="email" id="txt-correo">
+        </div>
+        <div>
+            <label for="txt-nombre">Nombre: </label>
             <input type="text" id="txt-nombre">
         </div>
 
         <div>
-            <label for="txt-peso">Peso</label>
-            <input type="number" id="txt-peso">
+            <label for="slt-genero">Género</label>
+            <select id="slt-genero">
+                <option value="">-- Seleccione su género --</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Otro">Otro</option>
+            </select>
         </div>
 
-        <div>
-            <label for="txt-estatura">Estatura</label>
-            <input type="number" id="txt-estatura">
-        </div>
-
-
-        <button type="button" id="btn-calcular">Calcular imc</button>
+        <button type="button" id="btn-registrar">Registrar</button>
     </form>
 
     <script src="js/usuario-registro.js"></script>
