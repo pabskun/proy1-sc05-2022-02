@@ -4,7 +4,7 @@ let usuarios = [{
     'genero': 'Masculino'
 }, {
     'correo': 'tamara@gmail.com',
-    'nombre': 'Tamara muñoz',
+    'nombre': 'Tamara Muñoz',
     'genero': 'Femenino'
 }, {
     'correo': 'dereck@gmail.com',
