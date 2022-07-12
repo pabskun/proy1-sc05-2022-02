@@ -41,7 +41,13 @@ const validar = () => {
     //Si hay error (error == true) se muestra un mensaje y no se permite obtener los datos
     //Si no hay error (error == false), entonces se obtienen los datos del formulario 
     if (error == true) {
-        console.log('Advertencia: Por favor revise los campos resaltados');
+        Swal.fire({
+            'icon': 'warning',
+            'title': 'Datos ingresados incorrectamente',
+            'text': 'Por favor revise los campos resaltados',
+            'confirmButtonText': 'Entendido'
+        });
+
     } else {
         obtenerDatos();
     }
@@ -59,6 +65,16 @@ const obtenerDatos = () => {
     console.log(usuario);
     //Imprimir valores específicos de la variable json
     console.log(usuario.correo);
+
+    //Funcionalidad TEMPORAL para la retroalimentación positiva
+    Swal.fire({
+        'icon': 'success',
+        'title': 'Datos ingresados correctamente',
+        'text': 'El usuario se registró adecuadamente',
+        'confirmButtonText': 'Entendido'
+    }).then(() => {
+        window.location.href = 'usuario-listar.html';
+    });
 };
 
 btnRegistrar.addEventListener('click', validar);
