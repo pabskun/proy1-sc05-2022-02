@@ -5,32 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 1. Archivo reset css -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- 2. Archivos de css externos (fuentes) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/tablas.css">
     <title>Document</title>
 </head>
 
 <body>
     <h1>Lista de usuarios</h1>
-    <table id="tbl-usuarios">
-        <thead>
-            <tr>
-                <th>Correo electrónico</th>
-                <th>Nombre</th>
-                <th>Género</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>sofia@gmail.com</td>
-                <td>Sofía Herrera</td>
-                <td>Femenino</td>
-            </tr>
-            <tr>
-                <td>pablo@gmail.com</td>
-                <td>Pablo Monestel</td>
-                <td>Masculino</td>
-            </tr>
-        </tbody>
-    </table>
+    <h2>Mostrar usuarios en una tabla</h2>
+    <section id="sct-tabla">
+        <table id="tbl-usuarios" class="tbl-info">
+            <thead>
+                <tr>
+                    <th>Correo electrónico</th>
+                    <th>Nombre</th>
+                    <th>Género</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>sofia@gmail.com</td>
+                    <td>Sofía Herrera</td>
+                    <td>Femenino</td>
+                </tr>
+                <tr>
+                    <td>pablo@gmail.com</td>
+                    <td>Pablo Monestel</td>
+                    <td>Masculino</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
     <script src="js/usuarios.js"></script>
     <script src="js/usuario-listar.js"></script>
 </body>

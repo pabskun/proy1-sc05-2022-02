@@ -11,6 +11,24 @@ const llenarTabla = () => {
         fila.insertCell().textContent = usuarioTemp.correo;
         fila.insertCell().textContent = usuarioTemp.nombre;
         fila.insertCell().textContent = usuarioTemp.genero;
+
+        //Creación de la celda para los botones
+        let tdAcciones = fila.insertCell();
+
+        //Creación del botón de editar
+        let btnEditar = document.createElement('button');
+        btnEditar.textContent = 'Editar';
+        btnEditar.type = 'button';
+
+        //Creación del botón de eliminar
+        let btnEliminar = document.createElement('button');
+        btnEliminar.textContent = 'Eliminar';
+        btnEliminar.type = 'button';
+
+        //Agregar el botón de editar y eliminar a la celda de acciones
+        tdAcciones.appendChild(btnEditar);
+        tdAcciones.appendChild(btnEliminar);
+
     });
 };
 
