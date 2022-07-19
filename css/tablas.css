@@ -34,3 +34,28 @@
     text-align: center;
     width: 5%;
 }
+
+.btn-editar {
+    background: #ff9f43;
+    border: transparent;
+    border-right: 3px solid #000;
+    cursor: pointer;
+    padding: 5px;
+    width: 60px;
+}
+
+.btn-editar:hover {
+    background: #feca57;
+}
+
+.btn-eliminar {
+    background: #ee5253;
+    border: transparent;
+    cursor: pointer;
+    padding: 5px;
+    width: 60px;
+}
+
+.btn-eliminar:hover {
+    background: #ff6b6b;
+}

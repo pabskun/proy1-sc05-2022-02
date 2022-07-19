@@ -19,11 +19,12 @@ const llenarTabla = () => {
         let btnEditar = document.createElement('button');
         btnEditar.textContent = 'Editar';
         btnEditar.type = 'button';
-
+        btnEditar.classList.add('btn-editar');
         //Creación del botón de eliminar
         let btnEliminar = document.createElement('button');
         btnEliminar.textContent = 'Eliminar';
         btnEliminar.type = 'button';
+        btnEliminar.classList.add('btn-eliminar');
 
         //Agregar el botón de editar y eliminar a la celda de acciones
         tdAcciones.appendChild(btnEditar);
