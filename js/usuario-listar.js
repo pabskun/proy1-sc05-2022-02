@@ -20,6 +20,7 @@ const llenarTabla = () => {
         btnEditar.textContent = 'Editar';
         btnEditar.type = 'button';
         btnEditar.classList.add('btn-editar');
+
         //Creación del botón de eliminar
         let btnEliminar = document.createElement('button');
         btnEliminar.textContent = 'Eliminar';
@@ -29,6 +30,26 @@ const llenarTabla = () => {
         //Agregar el botón de editar y eliminar a la celda de acciones
         tdAcciones.appendChild(btnEditar);
         tdAcciones.appendChild(btnEliminar);
+
+        btnEliminar.addEventListener('click', () => {
+            Swal.fire({
+                title: '¿Está seguro que desea eliminar la información?',
+                text: "La acción no se puede revertir",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: '¡Sí, eliminar!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        '¡Registro eliminado!',
+                        'El usuario fue borrado',
+                        'success'
+                    )
+                }
+            })
+        });
 
     });
 };
