@@ -1,4 +1,7 @@
+const tabla = document.querySelector('#tbl-usuarios');
 const cuerpoTabla = document.querySelector('#tbl-usuarios tbody');
+
+tabla.classList.add('ocultar');
 
 
 const llenarTabla = () => {
@@ -56,3 +59,16 @@ const llenarTabla = () => {
 
 
 llenarTabla();
+let btnMostrarOcultar = document.getElementById('btn-mostrar');
+
+btnMostrarOcultar.addEventListener('click', () => {
+    if (tabla.classList.contains('ocultar')) {
+        btnMostrarOcultar.textContent = 'Ocultar lista';
+        tabla.classList.remove('ocultar');
+    } else {
+        btnMostrarOcultar.textContent = 'Mostrar lista';
+        tabla.classList.add('ocultar');
+    }
+    //tabla.classList.toggle('ocultar');
+
+});

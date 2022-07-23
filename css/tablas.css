@@ -59,3 +59,10 @@
 .btn-eliminar:hover {
     background: #ff6b6b;
 }
+
+.ocultar {
+    /*El elemento desaparece del html, y DEJA DE OCUPAR ESPACIO*/
+    display: none;
+    /*El elemento desaparece del html, respeta el espacio (tamaño) requerido por el elemento*/
+    /* visibility: hidden; */
+}

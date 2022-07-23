@@ -23,9 +23,18 @@
 <body>
     <h1>Lista de usuarios</h1>
     <h2>Mostrar usuarios en una tabla</h2>
+    <button type="button" id="btn-mostrar">Mostrar lista</button>
     <section id="sct-tabla">
+
+
         <table id="tbl-usuarios" class="tbl-info">
             <thead>
+                <tr>
+                    <th><label for="txt-filtro">Filtro:</label> <input type="text" id="txt-filtro"></th>
+                    <th></th>
+                    <th></th>
+                    <th><button type="button" id="btn-agregar">Agregar</button></th>
+                </tr>
                 <tr>
                     <th>Correo electrónico</th>
                     <th>Nombre</th>
@@ -47,6 +56,7 @@
             </tbody>
         </table>
     </section>
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/usuarios.js"></script>
     <script src="js/usuario-listar.js"></script>
