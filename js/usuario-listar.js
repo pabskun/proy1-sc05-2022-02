@@ -2,7 +2,8 @@ const tabla = document.querySelector('#tbl-usuarios');
 const cuerpoTabla = document.querySelector('#tbl-usuarios tbody');
 const inputFiltro = document.getElementById('txt-filtro');
 
-tabla.classList.add('ocultar');
+// Descomentar para el ocultar/mostrar tabla
+// tabla.classList.add('ocultar');
 
 
 const llenarTabla = () => {
@@ -63,18 +64,21 @@ const llenarTabla = () => {
 
 
 llenarTabla();
-let btnMostrarOcultar = document.getElementById('btn-mostrar');
+// let btnMostrarOcultar = document.getElementById('btn-mostrar');
 
-btnMostrarOcultar.addEventListener('click', () => {
-    if (tabla.classList.contains('ocultar')) {
-        btnMostrarOcultar.textContent = 'Ocultar lista';
-        tabla.classList.remove('ocultar');
-    } else {
-        btnMostrarOcultar.textContent = 'Mostrar lista';
-        tabla.classList.add('ocultar');
-    }
-    //tabla.classList.toggle('ocultar');
+// btnMostrarOcultar.addEventListener('click', () => {
+//     if (tabla.classList.contains('ocultar')) {
+//         btnMostrarOcultar.textContent = 'Ocultar lista';
+//         tabla.classList.remove('ocultar');
+//     } else {
+//         btnMostrarOcultar.textContent = 'Mostrar lista';
+//         tabla.classList.add('ocultar');
+//     }
+//     //tabla.classList.toggle('ocultar');
 
-});
+// });
 
 inputFiltro.addEventListener('keyup', llenarTabla);
+document.getElementById('btn-agregar').addEventListener('click', () => {
+    window.location.href = 'usuario-registro.html';
+});
