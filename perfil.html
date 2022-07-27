@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- 1. Archivo reset css -->
     <link rel="stylesheet" href="css/reset.css">
-
-    <!-- 2. Archivos de css externos (fuentes) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -18,9 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
     <!-- 3. Estilos personalizados -->
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/index.css">
-    <title>Inicio</title>
-
+    <title>Document</title>
 </head>
 
 <body>
@@ -30,30 +24,18 @@
         </div>
 
         <nav>
-            <a href="">Inicio</a>
-            <a href="">Nosotros</a>
-            <a href="">Promociones</a>
+            <a href="index.html">Inicio</a>
+            <a href="perfil.html">Mi perfil</a>
+            <a href="usuarios-listar.html">Usuarios</a>
+            <a href="metodos-listar.html">Métodos de pago</a>
 
         </nav>
 
-        <a href="#" class="btn-celeste" id="btn-ingresar">Ingresar</a>
+        <a href="" class="btn-celeste">Cerrar sesión</a>
     </header>
+    <h1>Perfil</h1>
 
-    <section id="sct-banner">
-        <div class="info-banner">
-            <p>Los mejores videojuegos</p>
-            <p>Al mejor precio</p>
-        </div>
-        <div>
-            <input type="email" id="txt-correo" placeholder="Correo electrónico">
-            <button type="button" id="btn-codigo" class="btn-celeste">Solicitar código</button>
-        </div>
-
-    </section>
-
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/usuarios.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 
 </html>

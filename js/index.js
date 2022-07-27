@@ -1,27 +1,53 @@
-//Comentario de una línea
-/*
-    Comentarios
-    de múltiples líneas
-*/
+const btnIngresar = document.getElementById('btn-ingresar');
 
-// Forma obsoleta de crear una variable
-var nombre = 'Pablo';
+const iniciarSesion = async() => {
+    const { value: formValues } = await Swal.fire({
+        title: 'Inicio de sesión',
+        html: '<input id="txt-correo-inicio" class="swal2-input" type="email">' +
+            '<input id="txt-contrasenna" class="swal2-input" type="password">',
+        focusConfirm: false,
+        preConfirm: () => {
+            return [
+                document.getElementById('txt-correo-inicio').value,
+                document.getElementById('txt-contrasenna').value
+            ]
+        }
+    })
 
-// Formas actuales de declarar las variables
+    if (formValues) {
+        let correo = formValues[0];
+        let contrasenna = formValues[1];
+        validarCredenciales(correo, contrasenna);
+    }
+};
 
-//Crear una constante, es una "variable" cuyo valor no puede cambiar en tiempo de ejecución
-const PI = Math.PI;
+const validarCredenciales = (correo, contrasenna) => {
+    let usuarioValidado = false;
+    usuarios.forEach(objUsuario => {
+        if (objUsuario.correo == correo && objUsuario.contrasenna == contrasenna) {
+            usuarioValidado = true;
+            localStorage.setItem('usuarioConectado', JSON.stringify(objUsuario));
+        }
+    });
 
-//Impresión en consola
-console.log(PI);
+    if (usuarioValidado == false) {
+        Swal.fire({
+            'title': 'No se ha podido iniciar sesión',
+            'text': 'El correo del usuario o la contraseña son incorrectos',
+            'icon': 'warning',
+            'confirmButtonText': 'Entendido'
+        });
+    } else {
+        Swal.fire({
+            'title': 'Inicio de sesión correcto',
+            'text': 'Bienvenido',
+            'icon': 'success',
+            'confirmButtonText': 'Entendido'
+        }).then(() => {
+            window.location.href = 'perfil.html';
+        });
+    }
 
-//Crear una variable cuyo valor puede cambiar en tiempo de ejecución. Esta forma reemplaza a var
+};
 
-let edad = 34;
-edad = 35;
-console.log(edad);
-
-//Tipos de datos
-//String (cadena de caracteres)--> texto y siempre están entre comillas 'hola', '34', 'true'
-//Number --> para valores númericos (javascript a todos los números los ve como decimales)
-//Boolean --> true y false
+btnIngresar.addEventListener('click', iniciarSesion);

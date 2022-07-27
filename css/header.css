@@ -55,3 +55,7 @@ body {
 .header-principal .btn-celeste:hover {
     color: #fff;
 }
+
+.ocultar {
+    display: none;
+}
