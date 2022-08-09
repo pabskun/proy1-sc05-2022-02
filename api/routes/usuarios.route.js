@@ -28,9 +28,24 @@ router.post('/registrar-usuario', (req, res) => {
         }
     });
 
-
-
 });
+
+router.get('/listar-usuarios', (req, res) => {
+    Usuario.find((error, lista) => {
+        if (error) {
+            res.json({
+                "msj": "Los usuarios no se pudieron listar",
+                error
+            });
+        } else {
+            res.json({
+                "msj": "Usuarios listado correctamente",
+                lista
+            });
+        }
+    });
+});
+
 
 module.exports = router;
 //Siempre debe ir al final, si no se coloca da el siguiente error: "throw new TypeError('Router.use() requires a middleware function but got a ' + gettype(fn))"

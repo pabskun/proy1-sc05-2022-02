@@ -1,10 +1,13 @@
 const tabla = document.querySelector('#tbl-usuarios');
 const cuerpoTabla = document.querySelector('#tbl-usuarios tbody');
 const inputFiltro = document.getElementById('txt-filtro');
-
+let usuarios = [];
 // Descomentar para el ocultar/mostrar tabla
 // tabla.classList.add('ocultar');
-
+const llenarArregloUsuarios = async() => {
+    usuarios = await getDatos('listar-usuarios');
+    llenarTabla();
+};
 
 const llenarTabla = () => {
     cuerpoTabla.innerHTML = ''; //Limpia el contenido que tiene el cuerpo de la tabla
@@ -70,7 +73,7 @@ const llenarTabla = () => {
 };
 
 
-llenarTabla();
+llenarArregloUsuarios();
 // let btnMostrarOcultar = document.getElementById('btn-mostrar');
 
 // btnMostrarOcultar.addEventListener('click', () => {

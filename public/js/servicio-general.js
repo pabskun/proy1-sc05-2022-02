@@ -24,7 +24,7 @@ const registrarDatos = async(endpoint, data, redireccion) => {
 
 };
 
-const obtenerDatos = async(endpoint) => {
+const getDatos = async(endpoint) => {
     let url = `http://localhost:3000/api/${endpoint}`;
     let listaDatos = [];
     await axios({

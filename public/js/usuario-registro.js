@@ -61,20 +61,7 @@ const obtenerDatos = () => {
         'nombre': inputNombre.value,
         'genero': selectGenero.value
     };
-
-    console.log(usuario);
-    //Imprimir valores específicos de la variable json
-    console.log(usuario.correo);
-
-    //Funcionalidad TEMPORAL para la retroalimentación positiva
-    Swal.fire({
-        'icon': 'success',
-        'title': 'Datos ingresados correctamente',
-        'text': 'El usuario se registró adecuadamente',
-        'confirmButtonText': 'Entendido'
-    }).then(() => {
-        window.location.href = 'usuario-listar.html';
-    });
+    registrarDatos('registrar-usuario', usuario, 'usuarios-listar.html');
 };
 
 btnRegistrar.addEventListener('click', validar);
