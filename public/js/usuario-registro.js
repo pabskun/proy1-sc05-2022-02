@@ -1,5 +1,6 @@
 const inputCorreo = document.getElementById('txt-correo');
 const inputNombre = document.querySelector('#txt-nombre');
+const inputNacimiento = document.querySelector('#txt-nacimiento');
 const selectGenero = document.getElementById('slt-genero');
 const btnRegistrar = document.getElementById('btn-registrar');
 
@@ -18,6 +19,13 @@ const validar = () => {
         inputNombre.classList.add('input-error');
     } else {
         inputNombre.classList.remove('input-error');
+    }
+
+    if (inputNacimiento.value == '') {
+        error = true;
+        inputNacimiento.classList.add('input-error');
+    } else {
+        inputNacimiento.classList.remove('input-error');
     }
 
     if (selectGenero.value == '') {
@@ -59,7 +67,8 @@ const obtenerDatos = () => {
     let usuario = {
         'correo': inputCorreo.value,
         'nombre': inputNombre.value,
-        'genero': selectGenero.value
+        'genero': selectGenero.value,
+        'nacimiento': inputNacimiento.value
     };
     registrarDatos('registrar-usuario', usuario, 'usuarios-listar.html');
 };

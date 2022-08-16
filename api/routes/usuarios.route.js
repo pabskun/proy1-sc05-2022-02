@@ -12,7 +12,8 @@ router.post('/registrar-usuario', (req, res) => {
         "nombre": req.body.nombre,
         "correo": req.body.correo,
         "genero": req.body.genero,
-        "contrasenna": req.body.contrasenna
+        "contrasenna": req.body.contrasenna,
+        "nacimiento": req.body.nacimiento
     });
 
     usuarioNuevo.save(error => {
@@ -46,6 +47,20 @@ router.get('/listar-usuarios', (req, res) => {
     });
 });
 
+router.delete('/eliminar-usuario', (req, res) => {
+    Usuario.deleteOne({ _id: req.body._id }, error => {
+        if (error) {
+            res.json({
+                "msj": "El usuario no se pudo eliminar",
+                error
+            });
+        } else {
+            res.json({
+                "msj": "Usuario eliminado correctamente"
+            });
+        }
+    });
+});
 
 module.exports = router;
 //Siempre debe ir al final, si no se coloca da el siguiente error: "throw new TypeError('Router.use() requires a middleware function but got a ' + gettype(fn))"

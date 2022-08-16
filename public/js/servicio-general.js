@@ -57,7 +57,10 @@ const eliminarDatos = async(endpoint, _id) => {
         Swal.fire({
             'icon': 'success',
             'title': response.data.msj
+        }).then(() => {
+            window.location.reload();
         });
+
     }).catch(error => {
         Swal.fire({
             icon: 'error',

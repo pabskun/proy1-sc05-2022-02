@@ -1,6 +1,8 @@
 const tabla = document.querySelector('#tbl-usuarios');
 const cuerpoTabla = document.querySelector('#tbl-usuarios tbody');
 const inputFiltro = document.getElementById('txt-filtro');
+moment.locale('es');
+
 let usuarios = [];
 // Descomentar para el ocultar/mostrar tabla
 // tabla.classList.add('ocultar');
@@ -19,6 +21,7 @@ const llenarTabla = () => {
 
             fila.insertCell().textContent = usuarioTemp.correo;
             fila.insertCell().textContent = usuarioTemp.nombre;
+            fila.insertCell().textContent = moment(usuarioTemp.nacimiento).add(1, 'days').format('MM-DD-YYYY');
             fila.insertCell().textContent = usuarioTemp.genero;
 
             //Creación de la celda para los botones
@@ -51,21 +54,17 @@ const llenarTabla = () => {
                     confirmButtonText: '¡Sí, eliminar!'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        Swal.fire(
-                            '¡Registro eliminado!',
-                            'El usuario fue borrado',
-                            'success'
-                        )
+                        eliminarDatos('eliminar-usuario', usuarioTemp._id);
                     }
                 })
             });
 
             //Creación de un input
-            let inputGenerico = document.createElement('input');
-            inputGenerico.type = 'text';
-            inputGenerico.placeholder = 'Jhon Doe';
+            // let inputGenerico = document.createElement('input');
+            // inputGenerico.type = 'text';
+            // inputGenerico.placeholder = 'Jhon Doe';
 
-            fila.insertCell().appendChild(inputGenerico);
+            // fila.insertCell().appendChild(inputGenerico);
         }
 
 
